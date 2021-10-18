@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
         //nerhaba
         // git push
         // git push  2
+
+        // main ekleme yapıldı 3
         
     }
 
