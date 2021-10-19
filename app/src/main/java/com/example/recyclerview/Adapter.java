@@ -2,6 +2,7 @@ package com.example.recyclerview;
 
 import android.content.Context;
 import android.text.Layout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,14 +49,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.cardViewNesneTutucu> {
 
     @Override
     public void onBindViewHolder(@NonNull cardViewNesneTutucu holder, int position) {
-            String ulke =ulkelerListesi.get(position);
-            holder.satirYazi.setText(ulke);
-            holder.satirCardView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+        String ulke = ulkelerListesi.get(position);
+        holder.satirYazi.setText(ulke);
+        holder.satirCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "Ülke:" + ulke, Toast.LENGTH_SHORT).show();
 
-                }
-            });
+            }
+        });
     }
 
     @Override
